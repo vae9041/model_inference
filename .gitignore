@@ -1,0 +1,62 @@
+# Virtual Environment
+.venv/
+venv/
+env/
+ENV/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# PyTorch/Model files (too large for Git)
+*.pth
+*.pt
+*.ckpt
+*.bin
+
+# Large directories
+models_resnet18_v2/
+model_resnet_50/
+trained_models97.06pct/
+Pruned_model_v3/
+images_50/
+
+# Output files
+output/
+runs/
+*.log
+results/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# OS
+.DS_Store
+Thumbs.db
