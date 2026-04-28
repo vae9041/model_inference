@@ -36,7 +36,7 @@ All models are trained on grasp detection datasets and include inference scripts
    - Models are in: `model_resnet_50/`, `models_resnet18_v2/`, `Pruned_model_v3/` accessed in this link: https://drive.google.com/drive/folders/17vggB7ATP2DyJ13ozPqiVgVsqpdW-pKY?usp=sharing 
    - Sample images are in: `images_50/` accessed in this link: https://drive.google.com/drive/folders/1TTxl-jN5ifK_pZ3usGgey-lDCjdZKmR_?usp=sharing 
 
-## ⚡ Quick Inference Commands
+## Quick Inference Commands
 
 Run these commands from the project root directory:
 
@@ -176,7 +176,7 @@ Min / Max      : 31.36 ms / 33.10 ms
 ============================================================
 ```
 
-## 🔧 Understanding FP16 (Half Precision)
+## Understanding FP16 (Half Precision)
 
 **What is FP16?**
 - Uses 16-bit floating point instead of 32-bit (FP32)
@@ -219,7 +219,7 @@ FP16: 31.83 ms/image  ← ~1.93x faster
 └── requirements.txt                    # Python dependencies
 ```
 
-## 🔍 Performance Metrics
+##  Performance Metrics
 
 ### Throughput (images/second)
 
@@ -285,7 +285,7 @@ scores = predictions[0]['scores']
    ```
 
 
-## 🔗 Requirements
+## Requirements
 
 See `requirements.txt` for complete dependencies:
 
