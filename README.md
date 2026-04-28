@@ -2,7 +2,7 @@
 
 A collection of trained Faster R-CNN models for grasp detection, including standard ResNet-50/ResNet-18 backbones and a structured-pruned variant for improved inference speed.
 
-## 📋 Project Overview
+## Project Overview
 
 This repository contains:
 - **ResNet-50 FPN backbone** - High-accuracy grasp detection model
@@ -11,7 +11,7 @@ This repository contains:
 
 All models are trained on grasp detection datasets and include inference scripts with GPU support (CUDA 12.1+).
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Installation
 
@@ -66,7 +66,7 @@ python inference_structured_pruning_resnet_18.py \
   --runs 30 --warmup 10 --fp16
 ```
 
-## 📊 Model Benchmarks
+## Model Benchmarks
 
 All benchmarks run on **NVIDIA RTX 2000 Ada (16 GB VRAM)** with **FP16 precision** at **640x480 resolution**:
 
@@ -78,7 +78,7 @@ All benchmarks run on **NVIDIA RTX 2000 Ada (16 GB VRAM)** with **FP16 precision
 
 **Note:** Latency = mean inference time per image (forward pass only, no I/O)
 
-## 🎯 Model Descriptions
+## Model Descriptions
 
 ### ResNet-50 FPN (`inference_resnet_50.py`)
 - **Backbone**: ResNet-50 + Feature Pyramid Network (FPN)
@@ -121,7 +121,7 @@ python inference_structured_pruning_resnet_18.py \
   --runs 30 --warmup 10 --fp16
 ```
 
-## 📖 Usage Guide
+## Usage Guide
 
 ### Basic Inference
 
@@ -194,7 +194,7 @@ FP32: 61.29 ms/image
 FP16: 31.83 ms/image  ← ~1.93x faster
 ```
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 .
@@ -235,7 +235,7 @@ FP16: 31.83 ms/image  ← ~1.93x faster
 - **GPU synchronization**: <1 ms
 - **Warmup time** (10 runs): ~320 ms (first time only)
 
-## 🐍 Python API (Advanced)
+## Python API 
 
 ```python
 import torch
@@ -263,7 +263,7 @@ boxes = predictions[0]['boxes']
 scores = predictions[0]['scores']
 ```
 
-## 💡 Tips for Best Performance
+## Tips for Best Performance
 
 1. **Use FP16 for faster inference** (2x speedup)
    ```bash
@@ -284,10 +284,6 @@ scores = predictions[0]['scores']
    python inference_resnet_50.py --width 480 --height 360
    ```
 
-5. **Profile on your target hardware** (latency varies by GPU)
-   - Desktop GPU (RTX 4090): ~15-20 ms
-   - Mobile GPU (Snapdragon): ~150-300 ms
-   - Edge GPU (Jetson Nano): ~500+ ms
 
 ## 🔗 Requirements
 
@@ -307,7 +303,7 @@ tqdm>=4.67.0
 - CUDA 12.1+ (installed automatically with PyTorch)
 - cuDNN 9.1+ (installed automatically with PyTorch)
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### ModuleNotFoundError: No module named 'train_resnet_18'
 **Solution:** Ensure you're running inference scripts from the project root directory:
